@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="comsci.thanaporn.firstapp.Detail"
+    android:background="@drawable/bg27">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/H1"
+        android:id="@+id/txtTitleDetail"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/my_margin" />
+
+    <ImageView
+        android:layout_width="@dimen/my_picture"
+        android:layout_height="@dimen/my_picture"
+        app:srcCompat="@drawable/traffic_01"
+        android:id="@+id/imvImageDetail"
+        android:layout_below="@+id/txtTitleDetail"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="false"
+        android:layout_margin="@dimen/my_margin" />
+
+    <Button
+        android:text="Back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clickBack"
+        android:id="@+id/btnBack"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnBack"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/my_margin"
+        android:layout_below="@+id/imvImageDetail"
+        android:background="@color/colorAccent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDetailScroll" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
