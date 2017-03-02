@@ -35,12 +35,12 @@ public class MainActivity extends AppCompatActivity {
         // subString data เพื่อตัดข้อความ ให้สั้นตามที่ต้องการ
 
         shortStrings = new String[deitailStrings.length];
-        for(int i=0;i<=deitailStrings.length;i++){
+        for(int i=0;i<deitailStrings.length;i++){
             shortStrings[i] = deitailStrings[i].substring(0,29)+"..."; // start cut array String 0 to 30 char
         } // end for
 
         //create Listview
-        MyAdapter myAdapter = new MyAdapter(MainActivity.this,ints,titelStrings,deitailStrings);
+        MyAdapter myAdapter = new MyAdapter(MainActivity.this,ints,titelStrings,shortStrings);
         listView.setAdapter(myAdapter);
     }// main methot onCreate
 
